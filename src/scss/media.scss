@@ -1,0 +1,286 @@
+@import 'color.scss';
+@import 'mixins.scss';
+@media (max-width: 1180px ){
+    .sectionInner{
+        width: 100%;
+        padding: 0 toRem(20);
+    }
+    .sectionFirst{
+        margin-bottom: 150px;
+        &_conditions{
+            right: toRem(20);
+        }
+    }
+
+    .sectionHowWork{
+
+       &_attentions{
+
+           &-item{
+               width: 45%;
+           }
+        }
+    }
+}
+@media (max-width: 1100px ){
+    .sectionInner{
+        width: 100%;
+        padding: 0 toRem(20);
+    }
+    .sectionFirst{
+        margin-bottom: toRem(250);
+        .sectionInner{
+            height: toRem(650);
+        }
+        &_text{
+            &-title{
+                width: toRem(500);
+            }
+        }
+    }
+
+    .sectionHowWork{
+
+       &_attentions{
+
+           &-item{
+               width: 45%;
+           }
+        }
+    }
+    .sectionForm{
+        .sectionInner{
+            padding: 0 toRem(40);
+        }
+        &_text{
+            width: auto;
+            margin-right: toRem(20);
+        }
+    }
+}
+@media (max-width: 992px ){
+    .sectionFirst{
+        .sectionInner{
+            height: 100%;
+        }
+        height: auto;
+        margin-bottom: toRem(40);
+        &_text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &-title{
+                width: 100%;
+                text-align: center;
+            }
+            &-item{
+                width: 100%;
+                text-align: center;
+            }
+        }
+        &_conditions{
+            position: relative;
+            background: transparent;
+            height: auto;
+            width: 100%;
+            left: 0;
+            right: 0;
+            margin-top: toRem(20);
+            &-items{
+                position: relative;
+                width: 100%;
+                padding: toRem(25);
+            }
+        }
+    }
+    .sectionWhoIs{
+        height: auto;
+        .sectionInner{
+            height: 100%;
+        }
+        &_parts{
+            justify-content: center;
+            &-item{
+                margin-bottom: toRem(30);
+            }
+        }
+    }
+    .sectionHowWork{
+        height: auto;
+        .sectionInner{
+            height: 100%;
+        }
+        &_attentions{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &-item{
+                height: auto;
+                width: 100%;
+                margin-bottom: toRem(30);
+            }
+        }
+        &_stages{
+            flex-direction: column;
+            &-item{
+                margin-bottom: toRem(30);
+            }
+        }
+    }
+    .sectionBenefits{
+        height: auto;
+        .sectionInner{
+            height: 100%;
+        }
+        &_title{
+            text-align: center;
+        }
+        &_items{
+            flex-direction: column;
+            &-item{
+                margin: 0;
+                margin-bottom: toRem(30);
+            }
+        }
+    }
+    .sectionForm{
+        height: 100%;
+        background-image: url(../img/png/formBg_mob.png);
+        .sectionInner{
+            padding: toRem(30) toRem(60);
+            height: 100%;
+            flex-direction: column;
+        }
+        &_text{
+            width: 100%;
+            margin: 0;
+            margin-bottom: toRem(30);
+            &-title{
+                width: 100%;                
+                text-align: center;
+            }
+        }
+        &_form{
+            width: 100%;
+        }
+    }
+    .sectionFooter{
+
+        height: auto;
+        .sectionInner{
+            height: 100%;
+            flex-direction: column;
+            
+            
+        }
+        &_phone{
+            order: 2;
+            margin-bottom: toRem(20);
+        }
+        &_logo{
+            order: 1;
+            margin-bottom: toRem(20);
+        }
+        .social{
+            order: 3;
+            margin-bottom: toRem(20);
+        }
+    }
+}
+@media (max-width: 768px) {
+    .sectionFirst{
+
+        &_conditions{
+            width: 80%;
+            margin: toRem(20) auto;
+            &-items{
+                height: auto;
+                padding: 0 ;
+                ul{
+                    flex-direction: column;
+                    list-style: none;
+                    width: 100%;
+                    li{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 80%;
+                        &:nth-child(2){
+                            width: 80%;
+                        }
+                        &:last-child{
+                            border: none;
+                        }
+                        &:nth-child(1){
+                            border-bottom: 1px solid $secondary-text-color;
+                        }
+                        padding: 0 toRem(10);
+                        border: none;
+                        border-bottom: 1px solid $secondary-text-color;
+                    }
+                }
+            }
+        }
+    }
+    .sectionHowWork{
+        &_title{
+            text-align: center;
+        }
+    }
+    .sectionWhoIs{
+        &_title{
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .sectionFirst_text{
+        .btn_link{
+            width: 80%;
+        }
+        .btn{
+            width: 100%;
+        }
+    }
+    .sectionHowWork{
+        &_stages{
+            &-item{
+                width: 100%;
+            }
+        }
+    }
+    .sectionWhoIs{
+        &_parts{
+            &-item{
+                width: 100%;
+                &:nth-child(4){
+                    .sectionWhoIs_parts-itemNumber{
+                        font-size: toRem(25);
+                    }
+                }
+            }
+        }
+    }
+    .sectionWhoIs_parts-item:nth-child(4) .sectionWhoIs_parts-itemNumber
+    .sectionHowWork{
+        &_stages{
+            &-item{
+                width: 100%;
+            }
+        }
+    }
+    .sectionForm_form{
+        .btn{
+            font-size: toRem(15);
+        }
+    }
+    .sectionFooter{
+        &_logo{
+            font-size: toRem(40);
+        }
+    }  
+}
+@media (max-width: 360px) {}
+    

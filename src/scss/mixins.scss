@@ -1,0 +1,25 @@
+@function toRem($value) {
+    $remValue: $value + px; 
+    @return $remValue;
+}
+
+@mixin CeraProLight($size_px) {
+    font-family: "CeraPro",sans-serif;
+    font-weight: 200;
+    font-size: toRem($size_px);
+}
+@mixin CeraProMedium($size_px) {
+    font-family: "CeraPro",sans-serif;
+    font-weight: 400;
+    font-size: toRem($size_px);
+}
+@mixin CeraProRegular($size_px) {
+    font-family: "CeraPro",sans-serif;
+    font-weight: 500;
+    font-size: toRem($size_px);
+}
+@mixin CeraProBold($size_px) {
+    font-family: "CeraPro",sans-serif;
+    font-weight: 800;
+    font-size: toRem($size_px);
+}

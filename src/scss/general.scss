@@ -1,0 +1,41 @@
+@import 'color.scss';
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+body{
+}
+a,
+a:active,
+a:visited{
+    color: $primary-color;
+    text-decoration: none;
+}
+.sectionInner{
+    margin: 0 auto;
+    width: toRem(1920);
+    height: 100%;
+}
+.btn{
+    width: toRem(181);
+    height: toRem(40);
+    background-color: #F40808;
+    color: #FFFFFF;
+    @include CeraProBold(16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+
+    &:hover{
+        background-color: darken(#F40808, 4);
+    }
+    &:active{
+        background-color: #F40808;
+    }
+}

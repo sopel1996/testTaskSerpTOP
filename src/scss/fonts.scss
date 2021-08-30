@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "CeraPro";
+        src: url('../fonts/CeraPro-Light.eot') format('embedded-opentype'), /* IE6-IE8 */ 
+             url('../fonts/CeraPro-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+             url('../fonts/CeraPro-Light.woff') format('woff'), /* Pretty Modern Browsers */
+             url('../fonts/CeraPro-Light.woff2') format('woff2'); /* Super Modern Browsers */
+    font-weight: 200;
+    font-display: swap;
+}
+@font-face {
+    font-family: "CeraPro";
+        src: url('../fonts/CeraPro-Medium.eot') format('embedded-opentype'), /* IE6-IE8 */ 
+             url('../fonts/CeraPro-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+             url('../fonts/CeraPro-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+             url('../fonts/CeraPro-Medium.woff2') format('woff2'); /* Super Modern Browsers */
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "CeraPro";
+        src: url('../fonts/CeraPro-Regular.eot') format('embedded-opentype'), /* IE6-IE8 */ 
+             url('../fonts/CeraPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+             url('../fonts/CeraPro-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+             url('../fonts/CeraPro-Regular.woff2') format('woff2'); /* Super Modern Browsers */
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: "CeraPro";
+        src: url('../fonts/CeraPro-Bold.eot') format('embedded-opentype'), /* IE6-IE8 */ 
+             url('../fonts/CeraPro-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+             url('../fonts/CeraPro-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+             url('../fonts/CeraPro-Bold.woff2') format('woff2'); /* Super Modern Browsers */
+    font-weight: 800;
+    font-display: swap;
+}

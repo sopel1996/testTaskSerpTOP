@@ -1,0 +1,108 @@
+.sectionHeader{
+    &_firstLine{
+        border: none;
+        border-bottom: 1px solid rgba(30, 23, 68, 0.1);
+        height: toRem(50);
+        .sectionInner{
+            padding: 0 toRem(43);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-nav{
+            @include CeraProRegular(16);
+            &Item{
+                margin-right: toRem(58);
+            }
+        }
+        &-location{
+            width: toRem(360);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            &Item{
+                @include CeraProLight(16);
+                color: $primary-color;
+
+                &::before{
+                    display: inline-block;
+                    margin-right: toRem(7);
+                    content: ' ';
+                    width: toRem(12);
+                    height: toRem(17);
+                    background: transparent url(../img/svg/locationIcon.svg) 50% 50%/cover no-repeat;
+                }
+            }
+        }
+        &-phone{
+            color: $primary-color;
+            @include CeraProBold(18);
+
+        }
+        &-language{
+            @include CeraProRegular(16);
+            color: $primary-color;
+            text-transform: uppercase;
+        }
+    }
+    &_secondLine{
+        margin-top: toRem(15);
+        margin-bottom: toRem(40);
+        .sectionInner{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: toRem(230);
+            padding-right: toRem(95);
+        }
+        &-logo{
+            width: toRem(79);
+            height: toRem(70);
+            background: transparent url(../img/svg/logo.svg) 50% 50% /cover no-repeat;
+        }
+        &-nav{
+            width: toRem(1150);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            &Item{
+                @include CeraProMedium(16);
+                text-transform: uppercase;
+                &:last-child{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    &::after{
+                        margin-left: toRem(10);
+                        display: inline-block;
+                        content: "";
+                        width: toRem(16);
+                        height: toRem(9);
+                        background: transparent url(../img/svg/back.svg) 50% 50% no-repeat;
+                        background-size: contain;
+                    }
+                }
+            }
+        }
+        &-buttons{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: toRem(240);
+            &Phone{
+                width: toRem(40);
+                height: toRem(40);
+                background: transparent url(../img/svg/phoneBlue.svg) 50% 50% no-repeat;
+                border: 1px solid $primary-color;
+                border-radius: 5px;
+            }
+            .btn{}
+        }
+    }
+}
