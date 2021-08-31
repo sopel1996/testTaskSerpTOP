@@ -12,8 +12,12 @@
         }
         &-nav{
             @include CeraProRegular(16);
+            width: toRem(967);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
             &Item{
-                margin-right: toRem(58);
             }
         }
         &-location{
@@ -25,14 +29,19 @@
             &Item{
                 @include CeraProLight(16);
                 color: $primary-color;
+                margin-right: toRem(5);
 
                 &::before{
                     display: inline-block;
-                    margin-right: toRem(7);
+                    margin-right: toRem(5);
                     content: ' ';
                     width: toRem(12);
                     height: toRem(17);
                     background: transparent url(../img/svg/locationIcon.svg) 50% 50%/cover no-repeat;
+                }
+
+                &:first-child{
+                    margin-left: toRem(3);
                 }
             }
         }
@@ -54,16 +63,18 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-between;
-            padding-left: toRem(230);
+            justify-content: flex-end;
+            // padding-left: toRem(230);
             padding-right: toRem(95);
         }
         &-logo{
             width: toRem(79);
             height: toRem(70);
+            // margin-left: toRem(200);
             background: transparent url(../img/svg/logo.svg) 50% 50% /cover no-repeat;
         }
         &-nav{
+            margin-left: toRem(70);
             width: toRem(1150);
             display: flex;
             flex-direction: row;
@@ -73,6 +84,12 @@
                 @include CeraProMedium(16);
                 text-transform: uppercase;
                 &:last-child{
+                    position: relative;
+                    &:hover{
+                        .sectionHeader_secondLine-navItemList{
+                            display: block;
+                        }
+                    }
                     display: flex;
                     flex-direction: row;
                     align-items: center;
@@ -87,6 +104,27 @@
                         background-size: contain;
                     }
                 }
+                &List{
+                    display: none;
+                    list-style: none;
+                    // display: block;
+                    position: absolute;
+                    top: 20px;
+                    right: -60px;
+                    z-index: 20;
+                    width: 150px;
+                    li{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        height: 30px;
+                        border: none;
+                        border-bottom: 1px solid rgba(30, 23, 68, 0.3);
+                    }
+
+                }
+                
             }
         }
         &-buttons{
@@ -96,13 +134,16 @@
             justify-content: space-between;
             width: toRem(240);
             &Phone{
+                margin-left: toRem(50);
                 width: toRem(40);
                 height: toRem(40);
                 background: transparent url(../img/svg/phoneBlue.svg) 50% 50% no-repeat;
                 border: 1px solid $primary-color;
                 border-radius: 5px;
             }
-            .btn{}
+            .btn{
+                margin-left: toRem(20);
+            }
         }
     }
 }

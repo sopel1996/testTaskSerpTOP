@@ -65,4 +65,13 @@ window.addEventListener("resize", function () {
     items.forEach((item) => {
         item.style.minWidth = `${itemWidth}px`;
     });
+
+    let NavWidth = document.querySelector('.sectionHeader_secondLine-nav').clientWidth;
+
+    // console.log(NavWidth / 7 > 125 ? document.querySelector('.sectionHeader_secondLine-nav').children[document.querySelector('.sectionHeader_secondLine-nav').childElementCount-2]: 1);
+
+    let x=document.querySelector('.sectionHeader_secondLine-nav').children[document.querySelector('.sectionHeader_secondLine-nav').childElementCount - 2].outerHTML;
+    console.log(x);
+    console.log(document.querySelector('.sectionHeader_secondLine-navItemList').innerHTML += `<li>${x}</li>`);
+    document.querySelector('.sectionHeader_secondLine-nav').children[document.querySelector('.sectionHeader_secondLine-nav').childElementCount - 2].outerHTML=[];
 });
