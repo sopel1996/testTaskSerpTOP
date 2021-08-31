@@ -1,0 +1,227 @@
+.sectionSlider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & .sectionInner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // width: 100%;
+        position: relative;
+    }
+    &_container{
+        overflow: hidden;
+        position: relative;
+        &-title{
+
+            
+            z-index: 5;
+            width: toRem(560);
+            height: toRem(458);
+            @include CeraProLight(38);
+            color: $primary-color;
+            background-color: #fff;
+            position: absolute;
+            bottom: toRem(147);
+            left: toRem(382);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: toRem(41);
+            p{
+
+                span{
+                    font-weight: 400;
+                }
+            }
+
+
+            .slideNumb{
+                position: absolute;
+                top: toRem(49);
+                left: toRem(41);
+                width: toRem(164);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .btnPrev{}
+            .Numb{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                .currendSlide{
+                    @include CeraProMedium(28);
+                    align-self: flex-start;
+                    &::after{
+                        // content: '/';
+                    }
+                }
+                .divider,
+                .allSlides{
+                    @include CeraProMedium(18);
+                    
+                }
+            }
+            .btnNext{}
+
+
+        }
+        &-bottomContent{
+            width: toRem(1155);
+            height: toRem(147);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            // right: 50%;
+            transform: translate(-50%);
+            background: #fff;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            z-index: 5;
+            &SMI{
+                overflow: hidden;
+                width: toRem(164);
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                background: transparent url(../img/png/smi.png) 50% 50% no-repeat;
+                .content{
+                    position: relative;
+                    color: white;
+                    z-index: 10;
+                    @include CeraProMedium(27);
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    z-index: 5;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    background-color: rgba(244, 8, 8, 0.85); 
+                }
+            }
+            &Events{
+                background-color: $primary-color;
+                width: toRem(396);
+                height: 100%;
+                color: #fff;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                text-decoration: underline;
+                @include CeraProMedium(27);
+                
+            }
+            &Breakfast{
+                @include CeraProMedium(27);
+                width: toRem(294);
+                height: toRem(100);
+                border: none;
+                border-right: 1px solid rgba(30, 23, 68, 0.12);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+            &News{
+                padding: 0 toRem(46);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-evenly;
+                flex-grow: 2;
+                time{
+                    @include CeraProMedium(16);
+                    color: #3D5695;
+                }
+                .content{
+                    @include CeraProRegular(17);
+                    color: $primary-color;
+                    width: toRem(210);
+                }
+            }
+
+
+
+        }
+
+    }
+
+    &_track{
+        display: flex;
+        transition: .3s;
+
+        &-item{
+            &:nth-child(3n+1){
+                background-color: yellow;
+            }
+            &:nth-child(3n+2){
+            background-color: green;
+            }
+            &:nth-child(3n+3){
+            background-color: blue;
+            }
+            & img{
+                width: 100%;
+                height: 100%;
+            } 
+        }
+    }
+
+    .btnPrev,
+    .btnNext{
+            display: block;
+            // position: absolute;
+            // top: 50%;
+            // bottom: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: toRem(40);
+            height: toRem(40);
+            border-radius: 50%;
+            background-color: transparent;
+            color: $primary-color; 
+            outline: none;
+            border: 2px solid rgba(30, 23, 68, 0.3);
+            font-size: 30px; 
+            cursor: pointer;   
+    }
+
+    .btnPrev{
+        right: calc(100% - 75px);
+
+        &:hover {
+            background-color: rgba(255,255,255,.5);
+        }
+
+       
+    }
+
+      .btnNext{
+        left: calc(100% - 75px);
+        
+        &:hover {
+            background-color: rgba(255,255,255,.5);
+        }
+        
+
+       
+    }   
+
+
+}

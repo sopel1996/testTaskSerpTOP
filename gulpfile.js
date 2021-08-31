@@ -129,4 +129,4 @@ gulp.task('watch', () => {
 });
 
 //Таск по умолчанию, Запускает del, styles, scripts и watch
-gulp.task('default', gulp.series('del', 'html', gulp.parallel('styles', 'scripts', 'image_min', 'copy'), 'watch'));
+gulp.task('default', gulp.series('del', 'html', 'fontsConverter', gulp.parallel('styles', 'scripts', 'image_min', 'copy'), 'watch'));

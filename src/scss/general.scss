@@ -15,7 +15,7 @@ a:visited{
 }
 .sectionInner{
     margin: 0 auto;
-    width: toRem(1920);
+    max-width: toRem(1920);
     height: 100%;
 }
 .btn{
@@ -38,4 +38,7 @@ a:visited{
     &:active{
         background-color: #F40808;
     }
+}
+.disable{
+    opacity: 0.5;
 }
