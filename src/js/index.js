@@ -12,11 +12,33 @@ const curSlide = document.querySelector('.currendSlide');
 let itemWidth = container.clientWidth / slidesToShow;
 let movePosition = slidesToScroll * itemWidth;
 let current = 1;
+let menuItems = document.querySelectorAll('.sectionHeader_secondLine-navItem').length - 1;
 
 allSlides.textContent = itemsCount;
 items.forEach((item) => {
     item.style.minWidth = `${itemWidth}px`;
 });
+
+
+
+let NavWidth = document.querySelector('.sectionHeader_secondLine-nav').clientWidth;
+
+// console.log(NavWidth / 7 > 125 ? document.querySelector('.sectionHeader_secondLine-nav').children[document.querySelector('.sectionHeader_secondLine-nav').childElementCount-2]: 1);
+
+let x = document.querySelector('.sectionHeader_secondLine-nav').children[document.querySelector('.sectionHeader_secondLine-nav').childElementCount - 2].outerHTML;
+// console.log(document.querySelectorAll('.sectionHeader_secondLine-navItem').length);
+
+while (NavWidth / menuItems < 125) {
+
+    if (NavWidth / menuItems < 125) {
+
+        document.querySelector('.sectionHeader_secondLine-navItemList').innerHTML += `<li>${x}</li>`;
+        document.querySelector('.sectionHeader_secondLine-nav').children[document.querySelector('.sectionHeader_secondLine-nav').childElementCount - 2].outerHTML = [];
+        console.log(menuItems);
+        menuItems -= 1;
+    }
+}
+
 
 
 btnPrev.addEventListener('click', () => {
@@ -70,8 +92,24 @@ window.addEventListener("resize", function () {
 
     // console.log(NavWidth / 7 > 125 ? document.querySelector('.sectionHeader_secondLine-nav').children[document.querySelector('.sectionHeader_secondLine-nav').childElementCount-2]: 1);
 
-    let x=document.querySelector('.sectionHeader_secondLine-nav').children[document.querySelector('.sectionHeader_secondLine-nav').childElementCount - 2].outerHTML;
-    console.log(x);
-    console.log(document.querySelector('.sectionHeader_secondLine-navItemList').innerHTML += `<li>${x}</li>`);
-    document.querySelector('.sectionHeader_secondLine-nav').children[document.querySelector('.sectionHeader_secondLine-nav').childElementCount - 2].outerHTML=[];
+    let x = document.querySelector('.sectionHeader_secondLine-nav').children[document.querySelector('.sectionHeader_secondLine-nav').childElementCount - 2].outerHTML;
+    // console.log(document.querySelectorAll('.sectionHeader_secondLine-navItem').length);
+    if (NavWidth / menuItems < 125) {
+
+        document.querySelector('.sectionHeader_secondLine-navItemList').innerHTML += `<li>${x}</li>`;
+        document.querySelector('.sectionHeader_secondLine-nav').children[document.querySelector('.sectionHeader_secondLine-nav').childElementCount - 2].outerHTML = [];
+        console.log(menuItems);
+        menuItems -= 1;
+    }
+    if (NavWidth / menuItems > 150) {
+        let y = document.querySelector('.sectionHeader_secondLine-navItemList').children[document.querySelector('.sectionHeader_secondLine-navItemList').childElementCount - 1];
+        let z = document.querySelector('.sectionHeader_secondLine-nav');
+        z.innerHTML += y.innerHTML;
+        document.querySelector('.sectionHeader_secondLine-navItemList').children[document.querySelector('.sectionHeader_secondLine-navItemList').childElementCount - 1].remove();
+        let tmp = z.children[z.childElementCount - 1].outerHTML;
+
+        z.children[z.childElementCount - 1].outerHTML = z.children[z.childElementCount - 2].outerHTML;
+        z.children[z.childElementCount - 2].outerHTML = tmp;
+        menuItems += 1;
+    }
 });

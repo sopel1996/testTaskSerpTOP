@@ -21,7 +21,7 @@
             }
         }
         &-location{
-            width: toRem(360);
+            width: toRem(390);
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -112,7 +112,8 @@
                     top: 20px;
                     right: -60px;
                     z-index: 20;
-                    width: 150px;
+                    min-width: 150px;
+                    background: #fff;
                     li{
                         display: flex;
                         flex-direction: row;
@@ -121,6 +122,12 @@
                         height: 30px;
                         border: none;
                         border-bottom: 1px solid rgba(30, 23, 68, 0.3);
+                        .sectionHeader_secondLine-navItem{
+                            margin: toRem(5);
+                            &::after{
+                                display: none;
+                            }
+                        }
                     }
 
                 }

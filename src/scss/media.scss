@@ -13,6 +13,7 @@
             }
             
             &-location{
+                padding: 0 toRem(10);
                 &Item{
                     font-size: toRem(13);
                 }
@@ -20,11 +21,73 @@
             &-phone{
                 width: toRem(170);
                 font-size: toRem(16);
+                margin-right: toRem(10);
+            }
+        }
+    }
+    .sectionSlider{
+        &_container{
+            &-title{
+                height: toRem(460);
+                font-size: toRem(30);
+            }
+        }
+
+
+    }
+}
+@media (max-width: 1280px){
+    
+    .sectionHeader{
+
+        &_firstLine{
+            &-phone {
+                width: 215px;
+                font-size: 15px;
+                margin-right: 11px;
+            }
+        
+        }
+        .sectionHeader{
+            &_secondLine{
+                &-nav{
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .sectionSlider{
+        &_container{
+            &-title{
+                .slideNumb{
+                    top: toRem(10);
+                }
+                height: toRem(320);
+                width: toRem(327);
+                font-size: toRem(20);
+                align-items: flex-start;
+                padding-top: toRem(60);
+            }
+            &-bottomContent{
+                width: toRem(800);
+                height: toRem(120);
+                &SMI{
+                    .content{
+                        font-size: toRem(25);
+                    }
+                }
+                &Events{
+                    font-size: toRem(25);
+                }
+                &Breakfast{
+                    font-size: toRem(25);
+                    padding-left: toRem(20);
+                }
             }
         }
     }
 }
-@media (max-width: 1280px){}
 @media (max-width: 992px ){}
 @media (max-width: 768px ){}
 @media (max-width: 480px ){}
