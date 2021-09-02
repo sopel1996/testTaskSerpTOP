@@ -88,7 +88,26 @@
         }
     }
 }
-@media (max-width: 992px ){}
+@media (max-width: 992px ){
+    .sectionHeader_firstLine-phone{
+        display: none;
+    }
+    .sectionHeader .sectionHeader_secondLine-nav{
+        width: 35%;
+    }
+    .sectionSlider_container-bottomContent{
+        width: 100%;
+    }
+    .sectionSlider_container-title{
+        width: toRem(300);
+    }    
+    .sectionHeader_firstLine-location{
+        width: toRem(130);
+    }
+    .sectionHeader_firstLine-locationItem:last-child{
+        display: none;
+    }
+}
 @media (max-width: 768px ){}
 @media (max-width: 480px ){}
     
